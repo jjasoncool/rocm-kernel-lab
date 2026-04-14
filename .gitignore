@@ -1,0 +1,8 @@
+src/bin/
+*.o
+*.out
+results.csv
+results.json
+*.nsys-rep
+*.sqlite
+__pycache__/

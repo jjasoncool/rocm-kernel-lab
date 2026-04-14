@@ -1,0 +1,27 @@
+services:
+  hip-lab:
+    build:
+      context: .
+      args:
+        VERSION: ${VERSION}
+    container_name: hip-operator-lab
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp=unconfined
+    devices:
+      - /dev/kfd:/dev/kfd
+      - /dev/dri:/dev/dri
+    group_add:
+      - video
+    ipc: host
+    shm_size: 4g
+    tty: true
+    stdin_open: true
+    environment:
+      - TZ=Asia/Taipei
+    volumes:
+      - ./src:/workspace/src
+      - ./benchmarks:/workspace/benchmarks
+    command: bash
+    restart: unless-stopped
