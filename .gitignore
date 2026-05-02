@@ -6,3 +6,7 @@ results.json
 *.nsys-rep
 *.sqlite
 __pycache__/
+
+# 個人學習紀錄與筆記，不公開
+LEARNING.md
+notebook.md

@@ -5,6 +5,13 @@ HIP kernel implementations of common AI operators on AMD GPUs (RX 9070 XT / ROCm
 ## Quick start
 
 ```bash
+# Clone with submodules
+git clone --recurse-submodules <repo-url>
+# Or, if already cloned without --recurse-submodules:
+git submodule update --init --recursive
+# If submodule URLs changed upstream, sync them first:
+git submodule sync --recursive && git submodule update --init --recursive
+
 # Build & start container
 docker compose up -d --build
 docker exec -it hip-operator-lab bash

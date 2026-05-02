@@ -1,0 +1,3 @@
+[submodule "src/hip_programming_examples"]
+	path = src/hip_programming_examples
+	url = git@gitlab.com:research-tasks/hip_programming_examples.git

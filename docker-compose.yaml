@@ -2,6 +2,7 @@ services:
   hip-lab:
     build:
       context: .
+      dockerfile: rocm/.dockerfile
       args:
         VERSION: ${VERSION}
     container_name: hip-operator-lab
